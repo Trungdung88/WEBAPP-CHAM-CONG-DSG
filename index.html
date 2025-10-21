@@ -115,26 +115,31 @@
     </div>
     
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.1/firebase-app.js";
+       import { initializeApp } from "firebase/app";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, onSnapshot, updateDoc, serverTimestamp, getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
-
+import { getAnalytics } from "firebase/analytics";
         // --- CONFIG & STATE ---
         // Import the functions you need from the SDKs you need
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyCfl-dcyySZCRFD0ZbvzyZ7vuF7mHDd2EA",
   authDomain: "cham-cong-dsg-6aea5.firebaseapp.com",
+  databaseURL: "https://cham-cong-dsg-6aea5-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "cham-cong-dsg-6aea5",
   storageBucket: "cham-cong-dsg-6aea5.firebasestorage.app",
   messagingSenderId: "1088507632829",
-  appId: "1:1088507632829:web:7231326505eeec310c6bd4"
+  appId: "1:1088507632829:web:7231326505eeec310c6bd4",
+  measurementId: "G-QT0QV0Z6CB"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'cham-cong-default';
 
         const ADMIN_INFO = {
@@ -607,6 +612,7 @@ const app = initializeApp(firebaseConfig);
     </script>
 </body>
 </html>
+
 
 
 
