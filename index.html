@@ -15,7 +15,7 @@
         th:nth-child(2), td:nth-child(2) { position: sticky; left: 0; z-index: 10; background-color: white; }
         th:first-child, td:first-child { width: 200px; min-width: 200px; }
         th:nth-child(2), td:nth-child(2) { left: 200px; width: 150px; min-width: 150px; }
-        .weekend { background-color: #f7fafc; }
+        .weekend { background-color: #f8fafc; }
         .status-popover { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); }
         .status-popover button { padding: 0.5rem; border-radius: 0.25rem; font-size: 0.875rem; font-weight: 600; }
         .modal-backdrop { background-color: rgba(0, 0, 0, 0.5); }
@@ -115,7 +115,7 @@
     </div>
     
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.1/firebase-app.js";
         import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, doc, setDoc, onSnapshot, updateDoc, serverTimestamp, getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
@@ -131,9 +131,11 @@ const firebaseConfig = {
   projectId: "cham-cong-dsg-6aea5",
   storageBucket: "cham-cong-dsg-6aea5.firebasestorage.app",
   messagingSenderId: "1088507632829",
-  appId: "1:1088507632829:web:547dea09d8f17d920c6bd4"
+  appId: "1:1088507632829:web:7231326505eeec310c6bd4"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'cham-cong-default';
 
         const ADMIN_INFO = {
@@ -606,5 +608,4 @@ const firebaseConfig = {
     </script>
 </body>
 </html>
-
 
