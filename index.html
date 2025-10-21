@@ -121,7 +121,6 @@
 
         // --- CONFIG & STATE ---
         // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -135,8 +134,6 @@ const firebaseConfig = {
   appId: "1:1088507632829:web:547dea09d8f17d920c6bd4"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
         const appId = typeof __app_id !== 'undefined' ? __app_id : 'cham-cong-default';
 
         const ADMIN_INFO = {
@@ -609,4 +606,5 @@ const app = initializeApp(firebaseConfig);
     </script>
 </body>
 </html>
+
 
